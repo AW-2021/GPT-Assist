@@ -1,0 +1,8 @@
+.chatContainer {
+    display:flex;
+}
+
+.component {
+    flex: 12.5;
+    padding-left:20px
+}
