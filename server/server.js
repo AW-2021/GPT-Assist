@@ -19,9 +19,6 @@ mongoose
   .then(
     () => {
       console.log("MongoDB database connection established successfully!");
-    },
-    (err) => {
-      logError(err);
     }
   );
 

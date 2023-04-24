@@ -2,7 +2,14 @@
     display:flex;
 }
 
-.component {
-    flex: 12.5;
-    padding-left:20px
+.OuterWrapper{
+    display: flex;
+    flex-direction: column;
+    padding-left:10px;
+    flex:12.5;
+
+}
+
+.InnerWrapper{
+    display: flex;
 }

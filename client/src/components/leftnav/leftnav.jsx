@@ -1,7 +1,7 @@
 import React from "react";
 import "./leftnav.css";
 import { CiPaperplane } from "react-icons/ci";
-import { AiOutlineFileSearch } from "react-icons/ai";
+import { AiOutlineFileSearch, AiOutlineProject } from "react-icons/ai";
 import { RxPieChart } from "react-icons/rx";
 import { SiFramer } from "react-icons/si";
 import { Link } from "react-router-dom";
@@ -33,6 +33,17 @@ export default function LeftNav() {
               &nbsp;&nbsp;Chat
             </li>
           </Link>
+
+          <Link
+            to="/projects"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            <li>
+              <AiOutlineProject />
+              &nbsp;&nbsp;Projects
+            </li>
+          </Link>
+
           <Link
             to="/prompts"
             style={{ textDecoration: "none", color: "white" }}
@@ -42,7 +53,7 @@ export default function LeftNav() {
               &nbsp;&nbsp;Prompts
             </li>
           </Link>
-          <li></li>
+          
         </ul>
       </div>
     </div>

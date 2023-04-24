@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 
 .leftnav{ 
     color: white;
     margin:-10px;
     flex:2.5;
-    font-family: 'Manrope', sans-serif;
+  
 }
 
 .logo{
     background-color:  #0C5184;
-    height: 77px;
+    height: 10.6vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,13 +19,12 @@
 
 .nav{
     background-color:  #006AB7;
-    height: 1117px;
+    height: 95vh;
     justify-content: center;
     display: flex;
     font-weight: 500;
-    font-size:17px;
-    line-height: 25px;
-    letter-spacing: -0.3px
+    font-size:16px;
+    letter-spacing: -0.3px;
 }
 
 .nav ul{
@@ -41,3 +39,4 @@
 ul li:hover{
     color: rgb(230, 241, 241)
 }
+

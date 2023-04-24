@@ -1,0 +1,21 @@
+.btn-primary{
+  background-color:  #0C5184;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 0 2px 0 2px;
+
+}
+
+::placeholder {
+  font-size: 15px;
+}
+
+.form-control{
+margin-top: 9px;
+}

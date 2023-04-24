@@ -2,7 +2,107 @@
     display:flex;
 }
 
-.component {
-    flex: 12.5;
-    padding-left:20px
+.OuterWrapper{
+    display: flex;
+    flex-direction: column;
+    padding-left:10px;
+    flex:12.5;
+
 }
+
+.welcomeInnerWrapper{
+    display: flex;
+}
+
+.welcomeSection{
+    flex: 9.5;
+    padding: 20px;
+}
+
+.welcomeBox{
+    margin: 10px 230px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.allTopics{
+    flex: 3;
+    padding:10px;
+    background-color: rgb(241, 243, 237);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.welcomeNotice{
+    border: 2px solid #086cb9;
+    border-radius: 10px;
+    padding: 10px 70px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.welcomeNotice div{
+    font-size: 13px;
+}
+
+
+a:link { text-decoration: none; }
+  
+.search {
+    display: flex;
+    margin: 10px 0;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    font-size: 15px;
+  }
+  
+  
+  .searchButton {
+    width: 40px;
+    height: 32px;
+    border: none;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    font-size: 15px;
+    background-color: white;
+  }
+
+  .topicBox{
+    display: flex;
+    align-items:center;
+    height:56px;
+    width:100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+  }
+
+  img{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    margin-right: 17px;
+  }
+
+  .topicContent{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  .topicContent h7{
+    font-size: 9px;
+    margin-right: 9px;
+  }
+  
+  

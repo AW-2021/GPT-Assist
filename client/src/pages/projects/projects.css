@@ -1,0 +1,15 @@
+.projectsContainer {
+    display:flex;
+}
+
+.OuterWrapper{
+    display: flex;
+    flex-direction: column;
+    padding-left:10px;
+    flex:12.5;
+
+}
+
+.InnerWrapper{
+    display: flex;
+}
