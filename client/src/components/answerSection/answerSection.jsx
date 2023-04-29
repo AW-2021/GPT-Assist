@@ -1,7 +1,11 @@
 import "./answerSection.css";
 import { SiFramer } from "react-icons/si";
 
-export default function AnswerSection({ storedValues }) {
+export default function AnswerSection({
+  storedValues,
+  deleteResponse,
+  copyResponse,
+}) {
   return (
     <div className="answerContainer">
       <div className="answer">
@@ -19,8 +23,9 @@ export default function AnswerSection({ storedValues }) {
                     padding: "2px",
                   }}
                 />
-
+                
                 <p>{value.question}</p>
+
               </div>
 
               <table>
@@ -48,10 +53,18 @@ export default function AnswerSection({ storedValues }) {
       </div>
 
       <div className="chatIcons">
-        <button type="button" className="btn btn-light">
+        <button
+          type="button"
+          className="btn btn-light"
+          onClick={() => deleteResponse()}
+        >
           Delete
         </button>
-        <button type="button" className="btn btn-light">
+        <button
+          type="button"
+          className="btn btn-light"
+          onClick={() => copyResponse()}
+        >
           Copy
         </button>
         <button type="button" className="btn btn-light">

@@ -4,10 +4,11 @@ import LeftNav from "../../components/leftnav/leftnav";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { BsSearch } from "react-icons/bs";
 import { AiFillStar } from "react-icons/ai";
+import { Grid } from '@mui/material';
 
 export default function Welcome() {
   return (
-    <div className="welcomeContainer">
+    <Grid container>
       <LeftNav />
       <div className="OuterWrapper">
         <UpgradePane />
@@ -140,12 +141,9 @@ export default function Welcome() {
               </div>
             </div>
 
-
-
-
           </div>
         </div>
       </div>
-    </div>
+      </Grid>
   );
 }

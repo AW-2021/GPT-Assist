@@ -1,15 +1,36 @@
-.promptContainer {
-    display:flex;
-}
-
-.OuterWrapper{
+.promptInnerWrapper{
     display: flex;
     flex-direction: column;
-    padding-left:10px;
-    flex:12.5;
-
+    padding: 25px;
+    
 }
 
-.InnerWrapper{
+
+.promptsearchTerm {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    font-size: 15px;
+  }
+  
+  
+.promptsearchButton {
+    width: 60px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    font-size: 15px;
+    background-color: white;
+}
+
+.promptRow{
+    justify-content: space-between;
     display: flex;
+    padding:10px 0;
+}
+
+p{
+    font-size: 14px;
 }

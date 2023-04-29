@@ -1,0 +1,40 @@
+.prompt{
+    display:'flex';
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid #086cb9;
+    border-radius: 10px;
+    width: 250px;
+ 
+
+}
+
+.promptImg{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    background-color: rgb(216, 209, 209);
+}
+
+.promptText{
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.promptDesc{
+    font-size: 13px;
+}
+
+.new{
+    background-color: #086cb9;
+    color: white;
+    padding:2px 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    margin-left: 130px;
+}
+
+.prompt:hover{
+    box-shadow: 2px 2px 8px 8px #ebf2f7;
+}

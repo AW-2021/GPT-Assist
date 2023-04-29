@@ -3,10 +3,11 @@ import "./dashboard.css";
 import LeftNav from "../../components/leftnav/leftnav";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import { Grid} from "@material-ui/core";
 
 export default function Dashboard() {
   return (
-    <div className="dashboardContainer">
+    <Grid container>
       <LeftNav />
       <div className="OuterWrapper">
       <UpgradePane/>
@@ -88,6 +89,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </div>
+      </Grid>
   );
 }

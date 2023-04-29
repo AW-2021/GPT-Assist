@@ -13,7 +13,7 @@ export default function UpgradePane() {
       />
       <div className="upgradeText">
         Upgrade to Pro Plan To Get Access To All The Features &nbsp;&nbsp;
-        <button type="button" className="btn btn-primary" id='upgradeBtn'>
+        <button type="button" className="btn btn-primary">
           Upgrade Now!
         </button>
       </div>

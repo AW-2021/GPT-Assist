@@ -1,17 +1,10 @@
-
-.chatContainer {
-    display:flex;
-}
-
 .chat {
     display: flex;
     flex-direction: column;
-
     flex:8;
     
 }
 .OuterWrapper{
-    display: flex;
     flex-direction: column;
     padding-left:10px;
     flex:12.5;
