@@ -1,0 +1,11 @@
+.periodical{
+    display:flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.periodicalItem{
+    padding: 10px 20px;
+    border: 2px solid #d9e6db;
+    background-color: #f3fdf4;
+}
