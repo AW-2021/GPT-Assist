@@ -6,6 +6,9 @@ import Welcome from "./pages/welcome/welcome";
 import Projects from "./pages/projects/projects";
 import Signup from "./pages/signup-in/signup";
 import Signin from "./pages/signup-in/signin";
+import PricingPlans from "./pages/pricingplans/pricingplans";
+import StripeCheckout from "./pages/stripecheckout/stripecheckout";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./app.css"
 
@@ -21,6 +24,10 @@ export default function App() {
         <Route path="/account" element={<AccountInfo />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/welcome" element={<Welcome />} />
+        <Route path="/pricing" element={<PricingPlans/>}/>
+        <Route path="/checkout" element={<StripeCheckout/>}/>
+
+
       </Routes>
     </BrowserRouter>
   );

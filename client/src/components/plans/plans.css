@@ -1,0 +1,11 @@
+.plan{
+    background-color: #f3fdf4;
+    padding: 20px;
+    border-radius:10px;
+    border: 2px solid #d9e6db;
+    margin:0 10px;
+}
+
+.planList{
+    font-size: 12px;
+}
