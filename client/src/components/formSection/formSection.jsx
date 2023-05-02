@@ -12,7 +12,7 @@ export default function FormSection({ generateResponse }) {
             <textarea
                 rows="2"
                 className="form-control"
-                placeholder="E.G 'I want to start a car washing business that would make me rich'"
+                placeholder="E.G: 'I want to start a car washing business that would make me rich'"
                 value={newQuestion}
                 onChange={e => setNewQuestion(e.target.value)}
             />
