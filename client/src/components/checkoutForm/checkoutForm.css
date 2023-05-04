@@ -1,0 +1,38 @@
+.checkout-btn {
+  background-color: #038656;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: small;
+}
+
+.checkout-btn:hover {
+  background-color: #2c9770;
+}
+
+.contactinfo {
+  width: 100%;
+}
+
+#checkoutinput{
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#checkoutinput:focus{
+  background-color: #ebf7ec;
+  outline: none;
+}
+
+#card-element{
+    padding: 13px;
+    margin: 5px 0 10px 0;
+    background: #f1f1f1;
+}

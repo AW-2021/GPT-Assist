@@ -1,6 +1,6 @@
 import "./signup-in.css";
 import { Grid } from "@mui/material";
-import { GoogleLogin } from "react-google-login";
+//import { GoogleLogin } from "react-google-login";
 
 export default function Signup() {
   return (
@@ -52,11 +52,13 @@ export default function Signup() {
               Can't sign in?
             </a>
           </p>
-
-          <GoogleLogin
+          
+           {/*
+            <GoogleLogin
             buttonText="Sign In with Google"
-            className="googleButton"
-          />
+            className="googleButton"/>
+           */}
+          
 
           <br/><br/>
 
