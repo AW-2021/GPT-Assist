@@ -4,15 +4,27 @@ import FormSection from "../../components/formSection/formSection";
 import AnswerSection from "../../components/answerSection/answerSection";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { Configuration, OpenAIApi } from "openai";
-import { useState } from "react";
+import { useState,  useEffect } from "react";
 import { Grid } from "@material-ui/core";
 
 export default function Chat() {
   const [storedValues, setStoredValues] = useState([]);
+  const [openAIKey, setopenAIKey] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:5000/chat/config").then(async (r) => {
+      const { openAIKey } = await r.json();
+      console.log(openAIKey);
+      setopenAIKey(openAIKey)
+    });
+  }, []);
+
 
   const config = new Configuration({
-    apiKey: process.env.REACT_APP_OPENAI_KEY,
+    apiKey: openAIKey,
   });
+
+
   delete config.baseOptions.headers["User-Agent"];
 
   const openai = new OpenAIApi(config);
