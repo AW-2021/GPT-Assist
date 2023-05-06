@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import CheckoutForm from "../../components/checkoutForm/checkoutForm";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";

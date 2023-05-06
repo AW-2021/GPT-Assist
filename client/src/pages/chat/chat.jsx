@@ -5,7 +5,7 @@ import AnswerSection from "../../components/answerSection/answerSection";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { Configuration, OpenAIApi } from "openai";
 import { useState,  useEffect } from "react";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
 export default function Chat() {
   const [storedValues, setStoredValues] = useState([]);

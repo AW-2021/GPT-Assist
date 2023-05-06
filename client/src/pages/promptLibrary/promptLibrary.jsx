@@ -2,7 +2,7 @@ import React from "react";
 import "./promptLibrary.css";
 import LeftNav from "../../components/leftnav/leftnav";
 import UpgradePane from "../../components/upgradePane/upgradePane";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { BsSearch } from "react-icons/bs";
 import PromptBox from "../../components/promptBox/promptBox";
 

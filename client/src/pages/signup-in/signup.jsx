@@ -52,11 +52,11 @@ export default function Signup() {
 
           <p>
             By signing up, you agree to the&nbsp;
-            <a href="#" style={{ color: "dodgerblue" }}>
+            <a href="#welcome" style={{ color: "dodgerblue" }}>
               Terms & Conditions&nbsp;
             </a>
             and&nbsp;
-            <a href="#" style={{ color: "dodgerblue" }}>
+            <a href="#welcome" style={{ color: "dodgerblue" }}>
               Privacy Policy
             </a>
             .

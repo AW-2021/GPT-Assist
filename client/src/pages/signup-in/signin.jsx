@@ -48,7 +48,7 @@ export default function Signup() {
           </button>
 
           <p>
-            <a href="#" style={{ color: "grey" }}>
+            <a href="#welcome" style={{ color: "grey" }}>
               Can't sign in?
             </a>
           </p>

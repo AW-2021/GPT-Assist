@@ -1,5 +1,5 @@
 import "./pricingplans.css";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import FreePlan from "../../components/plans/freePlan";
 import ProPlan from "../../components/plans/proPlan";
 

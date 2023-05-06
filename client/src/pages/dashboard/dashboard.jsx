@@ -3,7 +3,7 @@ import "./dashboard.css";
 import LeftNav from "../../components/leftnav/leftnav";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import { Grid} from "@material-ui/core";
+import { Grid } from "@mui/material";
 
 export default function Dashboard() {
   return (
