@@ -1,12 +1,10 @@
-.prompt{
+/* .prompt{
     display:'flex';
     flex-direction: column;
     padding: 10px;
     border: 2px solid #086cb9;
     border-radius: 10px;
     width: 250px;
- 
-
 }
 
 .promptImg{
@@ -37,4 +35,4 @@
 
 .prompt:hover{
     box-shadow: 2px 2px 8px 8px #ebf2f7;
-}
+} */
