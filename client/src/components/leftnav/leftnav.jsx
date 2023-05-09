@@ -1,61 +1,96 @@
 import React from "react";
-import "./leftnav.css";
+import { useState } from "react";
 import { CiPaperplane } from "react-icons/ci";
 import { AiOutlineFileSearch, AiOutlineProject } from "react-icons/ai";
 import { RxPieChart } from "react-icons/rx";
 import { SiFramer } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { BsPersonCircle } from "react-icons/bs";
+import useMediaQuery from "../../hooks/useMediaQuery";
+function LeftNav() {
+  const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1024px)");
 
-export default function LeftNav() {
   return (
-    <div className="leftnav">
-      <div className="logo">
-        <SiFramer />
-        &nbsp;GPT Assist
+    <div className="flex flex-col text-white basis-[14%] bg-[#006AB7]">
+      <div className="h-[60px] bg-[#1a5a93] top-0 py-8">
+        <div className="w-full h-full flex md:justify-center xs:justify-between items-center text-xl font-bold">
+          <p><SiFramer className="inline" />&nbsp;GPT Assist</p>
+        {isAboveMediumScreens ? ("") : (
+          <button className="rounded-full bg-sky-500 p-2" 
+            onClick={() => setIsMenuToggled(!isMenuToggled)}>
+              <img alt="menu" src="../../assets/menu-icon.svg" className="mx-auto"/>
+          </button> 
+        )}
+        </div>
       </div>
-      <div className="nav">
-        <ul>
-          <Link
-            to="/dashboard"
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <li>
-              <RxPieChart />
-              &nbsp;&nbsp;Dashboard
-            </li>
-          </Link>
-          <Link
-            to="/chat"
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <li>
-              <CiPaperplane />
-              &nbsp;&nbsp;Chat
-            </li>
-          </Link>
 
-          <Link
-            to="/projects"
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <li>
-              <AiOutlineProject />
-              &nbsp;&nbsp;Projects
-            </li>
-          </Link>
+      {isAboveMediumScreens ? (
+        <div className="w-full h-full flex flex-col justify-between">
+          <div className="h-full flex flex-col items-start justify-start gap-4 bg-[#006AB7] 
+            text-[16px] pt-4 pl-4 font-light">
+              <Link className="hover:text-[rgb(212,224,224)]" to="/dashboard">
+                <RxPieChart />&nbsp;&nbsp;Dashboard
+              </Link>
 
-          <Link
-            to="/prompts"
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <li>
-              <AiOutlineFileSearch />
-              &nbsp;&nbsp;Prompts
-            </li>
-          </Link>
-          
-        </ul>
-      </div>
+              <Link to="/chat" className="hover:text-[rgb(212,224,224)]">
+                <CiPaperplane />&nbsp;&nbsp;Chat
+              </Link>
+
+              <Link to="/projects" className="hover:text-[rgb(212,224,224)]">
+                <AiOutlineProject />&nbsp;&nbsp;Projects
+              </Link>
+
+              <Link to="/prompts" className="hover:text-[rgb(212,224,224)]">
+                <AiOutlineFileSearch />&nbsp;&nbsp;Prompts
+              </Link>
+          </div>
+
+          <div className="bg-[#1a5a93] flex justify-start items-center gap-2 px-3 py-4">
+            <BsPersonCircle className="text-2xl"/>
+            <Link to="/account" className="hover:text-[rgb(212,224,224)]">Jane Smith</Link>
+          </div>
+        </div>
+      ) : ("")
+      }  
+
+      {!isAboveMediumScreens && isMenuToggled && (
+        <div className="flex flex-col justify-between fixed right-0 bottom-0 h-full bg-[#006AB7] w-[200px] z-30">
+          <div>
+            <div className="flex justify-end p-9">
+              <button onClick={() => setIsMenuToggled(!isMenuToggled)} className="rounded-full bg-yellow-500 p-1">
+                <img alt="close-icon" src="../../assets/close-icon.svg" className="mx-auto" />
+              </button>
+            </div>
+
+            <div className="flex flex-col ml-[12%] mt-2 gap-4 bg-[#006AB7] 
+              text-lg font-light">
+                <Link className="hover:text-[rgb(212,224,224)]" to="/dashboard">
+                  <RxPieChart />&nbsp;&nbsp;Dashboard
+                </Link>
+
+                <Link to="/chat" className="hover:text-[rgb(212,224,224)]">
+                  <CiPaperplane />&nbsp;&nbsp;Chat
+                </Link>
+
+                <Link to="/projects" className="hover:text-[rgb(212,224,224)]">
+                  <AiOutlineProject />&nbsp;&nbsp;Projects
+                </Link>
+
+                <Link to="/prompts" className="hover:text-[rgb(212,224,224)]">
+                  <AiOutlineFileSearch />&nbsp;&nbsp;Prompts
+                </Link>
+            </div>
+          </div>
+
+          <div className="bg-[#1a5a93] flex justify-start items-center gap-2 px-3 py-4">
+            <BsPersonCircle className="text-2xl"/>
+            <Link to="/account" className="hover:text-[rgb(212,224,224)]">Jane Smith</Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
+export default LeftNav;
