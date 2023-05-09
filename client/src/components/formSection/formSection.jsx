@@ -7,8 +7,8 @@ export default function FormSection({ generateResponse }) {
 
     return (
         <div className="form-section">
-            <button type="submit" className="btn btn-primary" onClick={() => generateResponse(newQuestion, setNewQuestion)}>
-                Regenerate Now🤖</button>
+            <button type="submit" className="btn btn-primary mb-2" onClick={() => generateResponse(newQuestion, setNewQuestion)}>
+                Regenerate Now 🤖</button>
             <textarea
                 rows="2"
                 className="form-control"
