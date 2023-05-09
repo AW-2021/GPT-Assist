@@ -1,14 +1,13 @@
-.chat {
+/* .chat {
     display: flex;
     flex-direction: column;
-    flex:8;
-    
+    flex:8; 
 }
+
 .OuterWrapper{
     flex-direction: column;
     padding-left:10px;
     flex:12.5;
-
 }
 
 .InnerWrapper{
@@ -19,5 +18,4 @@
     flex: 4;
     background-color: rgb(247, 245, 245);
     padding: 5px
-   
-}
+} */
