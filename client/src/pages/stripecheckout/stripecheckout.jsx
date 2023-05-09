@@ -9,7 +9,7 @@ export default function StripeCheckout() {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/checkout/config").then(async (r) => {
+    fetch("http://localhost:3000/checkout/config").then(async (r) => {
       const { publishableKey } = await r.json();
       console.log(publishableKey);
       setStripePromise(loadStripe(publishableKey));
@@ -17,7 +17,7 @@ export default function StripeCheckout() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/checkout/create-payment-intent", {
+    fetch("http://localhost:3000/checkout/create-payment-intent", {
       method: "POST",
       body: JSON.stringify({}),
     }).then(async (r) => {

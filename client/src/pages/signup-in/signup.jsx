@@ -1,8 +1,41 @@
 import "./signup-in.css";
 import { Grid } from "@mui/material";
 //import { GoogleLogin } from "react-google-login";
+import axios from 'axios';
+import { useState} from "react";
+import {useNavigate} from "react-router";
+
 
 export default function Signup() {
+
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  let navigate=useNavigate();
+
+  const handleSignup = async (e) => {
+    
+    e.preventDefault();
+
+    try {
+      const res = await axios.post('http://localhost:3000/auth/signup', {
+        username,
+        password,
+        email
+      });
+
+      const { token } = res.data;
+      localStorage.setItem('token', token);
+      window.alert('Signed up successfully!');
+      navigate("/signin");  // Redirect user to signin
+
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
   return (
     <Grid container style={{ justifyContent: "center" }}>
       <Grid item xs={8} sm={7} md={4}>
@@ -32,7 +65,9 @@ export default function Signup() {
           <input
             className="signup-inInput"
             type="text"
-            placeholder="Name"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             required
           />
 
@@ -40,6 +75,8 @@ export default function Signup() {
             className="signup-inInput"
             type="text"
             placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
 
@@ -47,6 +84,8 @@ export default function Signup() {
             className="signup-inInput"
             type="password"
             placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
@@ -62,7 +101,7 @@ export default function Signup() {
             .
           </p>
 
-          <button type="submit" className="signup-inbtn">
+          <button type="submit" className="signup-inbtn" onClick={handleSignup}>
             Agree and Sign Up
           </button>
  

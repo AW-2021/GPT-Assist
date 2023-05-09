@@ -1,8 +1,33 @@
 import "./signup-in.css";
 import { Grid } from "@mui/material";
 //import { GoogleLogin } from "react-google-login";
+import { useNavigate } from "react-router";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  let navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post("http://localhost:3000/auth/login", {
+        email,
+        password,
+      });
+
+      const { token } = res.data;
+      localStorage.setItem("token", token);
+      navigate("/welcome"); // Redirect user to welcome
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <Grid container style={{ justifyContent: "center" }}>
       <Grid item xs={8} sm={7} md={4}>
@@ -33,6 +58,8 @@ export default function Signup() {
             className="signup-inInput"
             type="text"
             placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
 
@@ -40,10 +67,12 @@ export default function Signup() {
             className="signup-inInput"
             type="password"
             placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
-          <button type="submit" className="signup-inbtn">
+          <button type="submit" className="signup-inbtn" onClick={handleLogin}>
             Sign In
           </button>
 
@@ -52,20 +81,20 @@ export default function Signup() {
               Can't sign in?
             </a>
           </p>
-          
-           {/*
+
+          {/*
             <GoogleLogin
             buttonText="Sign In with Google"
             className="googleButton"/>
            */}
-          
 
-          <br/><br/>
+          <br />
+          <br />
 
-          <p style={{ color: "grey", fontSize:"12px" }}>
-              This site is protected by reCAPTCHA and the Google <u>Private Policy</u> and <u>Terms of Service</u> apply.
+          <p style={{ color: "grey", fontSize: "12px" }}>
+            This site is protected by reCAPTCHA and the Google{" "}
+            <u>Private Policy</u> and <u>Terms of Service</u> apply.
           </p>
-
         </form>
       </Grid>
     </Grid>

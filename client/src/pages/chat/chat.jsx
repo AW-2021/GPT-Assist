@@ -10,7 +10,7 @@ export default function Chat() {
   const [openAIKey, setopenAIKey] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/chat/config").then(async (r) => {
+    fetch("http://localhost:3000/chat/config").then(async (r) => {
       const { openAIKey } = await r.json();
       console.log(openAIKey);
       setopenAIKey(openAIKey)

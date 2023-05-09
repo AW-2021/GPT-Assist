@@ -1,17 +1,12 @@
 import React from "react";
-import { useState } from "react";
 import LeftNav from "../../components/leftnav/leftnav";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import useMediaQuery from "../../hooks/useMediaQuery";
 
 function Dashboard() {
     const projectsBox = `flex flex-col items-center justify-center border-[2px] 
       border-[#84bde6] w-[225px] h-[125px] rounded-[10px] text-[12px]`;
-
-    const [isMenuToggled, setIsMenuToggled] = useState(false);
-    const isAboveMediumScreens = useMediaQuery("(min-width: 1024px)");
     
     return (
         <div className="md:flex h-full w-full">

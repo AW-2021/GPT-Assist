@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const cors = require('cors')
 const checkoutRoute=require("./routes/checkout")
 const chatRoute=require("./routes/chat")
+const authRoute=require("./routes/auth")
 
 require("dotenv").config();
 
@@ -28,6 +29,7 @@ mongoose
 
 app.use("/checkout",checkoutRoute)
 app.use("/chat",chatRoute)
+app.use("/auth",authRoute)
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
