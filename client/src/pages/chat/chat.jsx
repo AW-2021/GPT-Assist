@@ -1,11 +1,9 @@
-import "./chat.css";
 import LeftNav from "../../components/leftnav/leftnav";
 import FormSection from "../../components/formSection/formSection";
 import AnswerSection from "../../components/answerSection/answerSection";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { Configuration, OpenAIApi } from "openai";
 import { useState,  useEffect } from "react";
-import { Grid } from "@mui/material";
 
 export default function Chat() {
   const [storedValues, setStoredValues] = useState([]);
@@ -63,18 +61,18 @@ export default function Chat() {
   };
 
   return (
-    <Grid container>
+    <div className="md:flex h-full w-full">
       <LeftNav />
-      <div className="OuterWrapper">
+      <div className="flex flex-col basis-11/12">
         <UpgradePane />
-        <div className="InnerWrapper">
-          <div className="chat">
+        <div className="w-full h-full flex">
+          <div className="flex flex-col w-[100%]">
             <AnswerSection storedValues={storedValues} deleteResponse={deleteResponse} copyResponse={copyResponse}/>
             <FormSection generateResponse={generateResponse} />
           </div>
-          <div className="editor">editor</div>
+          <div className="basis-4/12 bg-[rgb(237,236,236)]">editor</div>
         </div>
       </div>
-    </Grid>
+    </div>
   );
 }
