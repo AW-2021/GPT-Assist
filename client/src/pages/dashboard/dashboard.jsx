@@ -9,7 +9,7 @@ function Dashboard() {
       border-[#84bde6] w-[225px] h-[125px] rounded-[10px] text-[12px]`;
     
     return (
-        <div className="md:flex h-full w-full">
+        <div className="md:flex w-full h-full">
           <LeftNav />
           <div className="flex flex-col basis-11/12">
             <UpgradePane />
