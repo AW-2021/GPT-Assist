@@ -27,7 +27,7 @@ function LeftNav() {
 
       {isAboveMediumScreens ? (
         <div className="w-full h-full flex flex-col justify-between">
-          <div className="h-full flex flex-col items-start justify-start gap-4 bg-[#006AB7] 
+          <div className="h-full flex flex-col items-start justify-start gap-8 bg-[#006AB7] 
             text-[16px] pt-4 pl-4 font-light">
               <Link className="hover:text-[rgb(212,224,224)]" to="/dashboard">
                 <RxPieChart />&nbsp;&nbsp;Dashboard
