@@ -13,7 +13,7 @@ export default function PromptBox(props) {
         setIsCopied(false);
         navigate('/chat');
       }
-    }, 1000);
+    }, 500);
   }
 
   function handleClick(text) {
@@ -23,7 +23,7 @@ export default function PromptBox(props) {
   }
   return (
     <div className="relative flex flex-col p-3 border-[2px] border-[#086cb9] rounded-[18px] 
-      hover:shadow-xl hover:shadow-sky-600/30" onClick={handleClick(props.desc)}>
+      hover:shadow-xl hover:shadow-sky-600/30 cursor-pointer" onClick={handleClick(props.desc)}>
       <div className="flex justify-between items-center">
         <img className="w-[40px] h-[40px] rounded-[50%] bg-[rgb(216,209,209)]" 
           src={props.src} alt={props.alt} />
