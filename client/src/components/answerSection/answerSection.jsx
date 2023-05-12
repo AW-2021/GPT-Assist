@@ -29,23 +29,25 @@ export default function AnswerSection({
               </div>
 
               <table>
-                <tr>
-                  <td>
-                    <SiFramer
-                      style={{
-                        color: "#0C5184",
-                        fontSize: "1.5em",
-                        marginRight: "15px",
-                        background: "lightgray",
-                        borderRadius: "50%",
-                        padding: "2px",
-                      }}
-                    />
-                  </td>
-                  <td>
-                    <p>{value.answer}</p>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>
+                      <SiFramer
+                        style={{
+                          color: "#0C5184",
+                          fontSize: "1.5em",
+                          marginRight: "15px",
+                          background: "lightgray",
+                          borderRadius: "50%",
+                          padding: "2px",
+                        }}
+                      />
+                    </td>
+                    <td>
+                      <p>{value.answer}</p>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           );
