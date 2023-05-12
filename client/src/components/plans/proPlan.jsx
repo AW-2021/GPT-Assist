@@ -1,5 +1,6 @@
 import "./plans.css";
 import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function ProPlan() {
   return (
@@ -12,8 +13,8 @@ export default function ProPlan() {
             alignItems: "center",
           }}
         >
-          <h5>Pro Plan</h5>
-          <div style={{fontSize:"14px"}}>
+          <h5 className="text-xl">Pro Plan</h5>
+          <div style={{fontSize:"14px"}} className="font-bold">
           $19 / monthly<br/>
           $147 / yearly
           </div>
@@ -34,9 +35,13 @@ export default function ProPlan() {
           <li>Get access to all future updates</li>
           <li>Priority Email Support</li>
         </ul>
+
+        <Link to="/checkout">
         <button type="button" class="btn btn-light">
           Get Started
         </button>
+        </Link>
+
       </div>
     </Grid>
   );

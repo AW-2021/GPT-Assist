@@ -65,6 +65,7 @@ export default function Welcome() {
               />
             </div>
 
+            
             <div className="topicBox">
               <img src="https://cdn.pixabay.com/photo/2017/07/03/20/17/colorful-2468874_960_720.jpg" alt="social media"/>
               <div className="topicContent">
@@ -78,6 +79,7 @@ export default function Welcome() {
                 }}
               />
             </div>
+
 
             <div className="topicBox">
               <img src="https://cdn-icons-png.flaticon.com/512/2600/2600291.png" alt="copy writing"/>

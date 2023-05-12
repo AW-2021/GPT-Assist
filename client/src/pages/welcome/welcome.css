@@ -101,5 +101,9 @@ a:link { text-decoration: none; }
     font-size: 9px;
     margin-right: 9px;
   }
+
+  .topicBox:hover{
+    box-shadow: 2px 2px 2px 2px #cbdfee;
+  }
   
   

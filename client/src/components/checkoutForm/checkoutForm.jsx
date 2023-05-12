@@ -3,7 +3,7 @@ import { useState } from "react";
 import {
   PaymentElement,
   useStripe,
-  useElements
+  useElements,
 } from "@stripe/react-stripe-js";
 
 export default function CheckoutForm() {
@@ -41,10 +41,12 @@ export default function CheckoutForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input id="checkoutinput" type="email" placeholder="Email" />
+    <form onSubmit={handleSubmit} className="flex flex-col items-end">
+      <a href="/signin" style={{ color: "dodgerblue" }} className="text-sm">
+        Sign in
+      </a>
 
-      <PaymentElement id="payment-element" />
+      <PaymentElement id="payment-element" className="w-full"/>
 
       <button className="checkout-btn" disabled={!stripe || !elements}>
         {isProcessing ? "Processing ... " : "Pay now"}

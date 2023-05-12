@@ -5,11 +5,15 @@ export default function AnswerSection({
   storedValues,
   deleteResponse,
   copyResponse,
+  addToEditor
 }) {
+  
+  
   return (
     <div className="answerContainer">
       <div className="answer">
-        {storedValues.map((value) => {
+        { 
+        storedValues.map((value) => {
           return (
             <div>
               <div style={{ display: "flex" }}>
@@ -69,7 +73,11 @@ export default function AnswerSection({
         >
           Copy
         </button>
-        <button type="button" className="btn btn-light">
+        <button 
+        type="button" 
+        className="btn btn-light"
+        onClick={() => addToEditor()}
+        >
           Add to Editor
         </button>
       </div>

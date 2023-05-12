@@ -1,5 +1,4 @@
-
-.signup-inInput{
+.signup-inInput {
   width: 100%;
   padding: 10px;
   margin: 5px 0 10px 0;
@@ -30,8 +29,12 @@ hr {
 
 .signup-inbtn:hover {
   background-color: #2c9770;
-  }
+}
 
-  .googleButton{
-    width: 100%;
-  }
+.googleButton {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  accent-color: #038656;
+}

@@ -44,19 +44,24 @@ export default function StripeCheckout() {
           style={{ width: "120px", height: "80px" }}
         />
         <p>Subscribe to ChatGPT Plus Subscription</p>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <h1>$20</h1>
+        <div
+          style={{ display: "flex", alignItems: "center" }}
+          className="font-bold my-3"
+        >
+          <h1 className="text-5xl">$20</h1>
           <div style={{ fontSize: "12px", marginLeft: "5px" }}>
             per <br />
             month
           </div>
         </div>
-        <p>ChatGPT Plus Subscription ~ $20</p>
-        <p>Subtotal ~ $20</p>
-        <hr />
-        <p style={{ color: "darkgrey" }}>Tax ~ Enter address to calculate</p>
-        <hr />
-        <p>Total due today ~ $20</p>
+        <div className="text-sm">
+          <p>ChatGPT Plus Subscription ~ $20</p>
+          <p>Subtotal ~ $20</p>
+          <hr />
+          <p style={{ color: "darkgrey" }}>Tax ~ Enter address to calculate</p>
+          <hr />
+          <p>Total due today ~ $20</p>
+        </div>
       </Grid>
 
       <Grid

@@ -19,3 +19,12 @@
     background-color: rgb(247, 245, 245);
     padding: 5px
 } */
+
+#clearEditor:hover{
+    background-color: rgb(187, 9, 9) !important
+
+}
+
+#saveToFile:hover{
+    background-color: rgb(8, 177, 8) !important
+}

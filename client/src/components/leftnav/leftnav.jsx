@@ -1,15 +1,31 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { CiPaperplane } from "react-icons/ci";
 import { AiOutlineFileSearch, AiOutlineProject } from "react-icons/ai";
 import { RxPieChart } from "react-icons/rx";
 import { SiFramer } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
+import { AuthContext } from '../../context/authContext';
+import axios from "axios";
+
 import useMediaQuery from "../../hooks/useMediaQuery";
 function LeftNav() {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const [username, setUsername]=useState('')
   const isAboveMediumScreens = useMediaQuery("(min-width: 1024px)");
+  const {user}=useContext(AuthContext);
+  const email=user.email;
+
+  useEffect(() => {
+    const fetchUser=async()=>{
+      const res = await axios.get(`http://localhost:3000/user?email=${email}`);
+      setUsername(res.data.username)
+    }
+    fetchUser();
+
+}, [username]);
+
 
   return (
     <div className="flex flex-col text-white basis-[14%] bg-[#006AB7]">
@@ -48,7 +64,7 @@ function LeftNav() {
 
           <div className="bg-[#1a5a93] flex justify-start items-center gap-2 px-3 py-4">
             <BsPersonCircle className="text-2xl"/>
-            <Link to="/account" className="hover:text-[rgb(212,224,224)]">Jane Smith</Link>
+            <Link to="/account" className="hover:text-[rgb(212,224,224)]">{username}</Link>
           </div>
         </div>
       ) : ("")
@@ -85,7 +101,7 @@ function LeftNav() {
 
           <div className="bg-[#1a5a93] flex justify-start items-center gap-2 px-3 py-4">
             <BsPersonCircle className="text-2xl"/>
-            <Link to="/account" className="hover:text-[rgb(212,224,224)]">Jane Smith</Link>
+            <Link to="/account" className="hover:text-[rgb(212,224,224)]"></Link>
           </div>
         </div>
       )}

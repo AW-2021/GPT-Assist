@@ -3,10 +3,14 @@ const mongoose = require("mongoose");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cors = require('cors')
-const checkoutRoute = require("./routes/checkout");
-const chatRoute = require("./routes/chat");
-const authRoute = require("./routes/auth");
+
 const promptRoute = require("./routes/prompt");
+const checkoutRoute=require("./routes/checkout")
+const chatRoute=require("./routes/chat")
+const authRoute=require("./routes/auth")
+const userRoute=require("./routes/user")
+const fileRoute=require("./routes/file")
+const projectRoute=require("./routes/project")
 
 require("dotenv").config();
 
@@ -31,6 +35,10 @@ app.use("/checkout",checkoutRoute)
 app.use("/chat",chatRoute)
 app.use("/auth",authRoute)
 app.use('/prompt', promptRoute)
+app.use("/file",fileRoute)
+app.use('/project', projectRoute)
+app.use("/user",userRoute)
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

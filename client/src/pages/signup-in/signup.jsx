@@ -28,7 +28,7 @@ export default function Signup() {
       const { token } = res.data;
       localStorage.setItem('token', token);
       window.alert('Signed up successfully!');
-      navigate("/signin");  // Redirect user to signin
+      navigate("/pricing");  // Redirect user to signin
 
     } catch (error) {
       console.error(error);
@@ -54,13 +54,15 @@ export default function Signup() {
               justifyContent: "space-between",
             }}
           >
-            <h4>Sign Up</h4>
+            <h4 className="text-2xl">Sign Up</h4>
             <p>
-              <a href="/signin" style={{ color: "dodgerblue" }}>
+              <a href="/signin" style={{ color: "dodgerblue" }} className="text-sm">
                 I have an account
               </a>
             </p>
           </div>
+
+          <br/>
 
           <input
             className="signup-inInput"
@@ -89,7 +91,7 @@ export default function Signup() {
             required
           />
 
-          <p>
+          <p className="text-sm">
             By signing up, you agree to the&nbsp;
             <a href="#welcome" style={{ color: "dodgerblue" }}>
               Terms & Conditions&nbsp;
