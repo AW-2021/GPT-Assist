@@ -27,3 +27,32 @@ input:focus {
   -webkit-box-shadow: none;
 
 }
+
+.answerContainer{
+  font-size: 15px;
+}
+.answer{
+  display: flex;
+  height: 63vh;
+  overflow-y: scroll;
+  flex-direction: column;
+  padding: 30px
+}
+
+.chatIcons{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+
+}
+
+.btn-light{
+  font-size: 14px;
+  border-radius: 30px;
+  border: 1px solid rgb(197, 193, 193);
+  margin-right: 5px;
+}
+
+.table .tr .td{
+  vertical-align: top;
+}

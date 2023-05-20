@@ -1,6 +1,5 @@
 import LeftNav from "../../components/leftnav/leftnav";
 import FormSection from "../../components/formSection/formSection";
-import AnswerSection from "../../components/answerSection/answerSection";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { Configuration, OpenAIApi } from "openai";
 import { useState, useEffect, useRef, useContext } from "react";
@@ -47,14 +46,14 @@ export default function Chat(props) {
 
   const openai = new OpenAIApi(config);
 
-  const generateResponse = async (newQuestion, setNewQuestion, no) => {
+  const generateResponse = async (newQuestion, setNewQuestion, setPrevQuestion, no) => {
     let options = {
       model: "text-davinci-003",
-      temperature: 0,
+      temperature: 0.7,
       max_tokens: 2000,
       top_p: 1,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
+      frequency_penalty: 1,
+      presence_penalty: 1.5,
       stop: ["/"],
       prompt: newQuestion,
     };
@@ -69,6 +68,8 @@ export default function Chat(props) {
           answer: response.data.choices[no].text,
         },
       ]);
+
+      setPrevQuestion(newQuestion)
       setNewQuestion("");
     }
   };
@@ -105,11 +106,12 @@ export default function Chat(props) {
   const handleSaveToFile = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/file/create", 
-      { name:fileName, 
-        text: fileText, 
-        uploadedBy: userID
-      });
+      const res = await axios.post("http://localhost:3000/file/create",
+        {
+          name: fileName,
+          text: fileText,
+          uploadedBy: userID
+        });
       console.log(res)
       setIsModalOpen(false);
       setFileName("");
@@ -169,13 +171,12 @@ export default function Chat(props) {
               </form>
             </Modal>
 
-            <AnswerSection
+
+            <FormSection generateResponse={generateResponse}
               storedValues={storedValues}
               deleteResponse={deleteResponse}
               copyResponse={copyResponse}
-              addToEditor={addToEditor}
-            />
-            <FormSection generateResponse={generateResponse} />
+              addToEditor={addToEditor} />
           </div>
           <div className="basis-4/12 bg-[rgb(237,236,236)]">
             <Editor
