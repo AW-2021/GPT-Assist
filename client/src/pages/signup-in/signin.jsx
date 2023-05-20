@@ -55,7 +55,7 @@ export default function Signup() {
           >
             <h4 className="text-2xl">Sign In</h4>
             <p>
-              <a href="/" style={{ color: "dodgerblue" }} className="text-sm">
+              <a href="/signup" style={{ color: "dodgerblue" }} className="text-sm">
                 I don't have an account
               </a>
             </p>
