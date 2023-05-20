@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import LeftNav from "../../components/leftnav/leftnav";
 import UpgradePane from "../../components/upgradePane/upgradePane";
 import { BsSearch } from "react-icons/bs";
 import PromptBox from "../../components/promptBox/promptBox";
+import { AuthContext } from "../../context/authContext";
 import axios from 'axios';
 
 export default function PromptLibrary() {
@@ -50,6 +51,27 @@ export default function PromptLibrary() {
 
   const [prompts, setPrompts] = useState([]);
   const [showAll, setShowAll] = useState(true);
+  const [userID, setUserID] = useState('');
+  const [username, setUsername]=useState('');
+  const { user } = useContext(AuthContext);
+  const email = user.email;
+
+    useEffect(() => {
+      const fetchUser = async()=>{
+        const res = await axios.get(`http://localhost:3000/user?email=${email}`);
+        setUsername(res.data.username)
+      }
+      fetchUser();
+
+  }, [username]);
+
+  useEffect(() => {
+    const fetchUserID = async () => {
+      const res = await axios.get(`http://localhost:3000/user?email=${email}`);
+      setUserID(res.data._id);
+    };
+    fetchUserID();
+  }, [userID]);
 
   useEffect(() => {
     axios.get('http://localhost:3000/prompt')
@@ -63,8 +85,14 @@ export default function PromptLibrary() {
     .catch(error => console.error(error));
   }
 
+  const handleCustomClick = () => {
+    axios.get(`http://localhost:3000/prompt/custom?promptUser=${userID}`)
+    .then(response => setPrompts(response.data))
+    .catch(error => console.error(error));
+  }
+
   const handleFilterClick = (categoryType) => {
-    if (categoryType === 'Social Media' || categoryType === 'Twitter' || categoryType === 'YouTube' || categoryType === 'LinkedIn' 
+    if (categoryType === 'Custom' || categoryType === 'Social Media' || categoryType === 'Twitter' || categoryType === 'YouTube' || categoryType === 'LinkedIn' 
     || categoryType === 'Blog Articles' || categoryType === 'Copy Writing' || categoryType === 'Business' || categoryType === 'Others'){
       setShowAll(false);
     }
@@ -81,20 +109,22 @@ export default function PromptLibrary() {
         <UpgradePane />
         <div className="flex flex-col w-[90%] pt-8 mx-auto h-full">
           <div className="flex items-center justify-around rounded-[10px] bg-white h-12 border-[rgb(224,224,224)] border-2">
-            <button type="submit" className="text-lg px-[10px] h-full">
+            Double click on a box below to copy!
+            {/* <button type="submit" className="text-lg px-[10px] h-full">
               <BsSearch style={{ color: "grey" }} />
             </button>
             <input
               type="text"
               className="text-lg w-[96%] border-none outline-none"
               placeholder="Double click on a box below to copy!"
-            />
+            /> */}
           </div>
 
           <div className="flex justify-between items-center pt-3 pb-4 font-bold">
             <button type="button" className="btn btn-primary w-[12%]" onClick={() => handleFilterClick('')}>
               All Prompts
             </button>
+            <button onClick={() => handleCustomClick()} className="hover:text-yellow-500"><p className="text-sm">Custom</p></button>
             <button onClick={() => handleFilterClick('Social Media')} className="hover:text-yellow-500"><p className="text-sm">Social Media</p></button>
             <button onClick={() => handleFilterClick('Twitter')} className="hover:text-yellow-500"><p className="text-sm">Twitter</p></button>
             <button onClick={() => handleFilterClick('YouTube')} className="hover:text-yellow-500"><p className="text-sm">YouTube</p></button>
