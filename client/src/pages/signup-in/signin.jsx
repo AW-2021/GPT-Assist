@@ -29,7 +29,7 @@ export default function Signup() {
       const { token } = res.data;
       user.token = token;
       dispatch({type:"LOGIN_SUCCESS", payload:user})
-      navigate("/welcome"); // Redirect user to welcome
+      navigate("/dashboard"); // Redirect user to dashboard
     } catch (err) {  
       dispatch({type:"LOGIN_FAILURE", payload:err})
     }
