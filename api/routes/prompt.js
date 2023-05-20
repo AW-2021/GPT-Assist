@@ -11,10 +11,11 @@ router.post('/', async (req, res) => {
     try{
         const newPrompt = new Prompt(req.body);
         await newPrompt.save();
-        // res.status(201).send(prompt);
+        res.status(201).send(prompt);
         console.log('New prompt created: ', newPrompt);
     } catch (err) {
-        res.status(400).send(err)
+        res.status(400).send(err);
+        console.log(err);
     }
 });
 
@@ -26,6 +27,17 @@ router.get('/', async (req, res) => {
         res.send(allprompts);
     } catch (err) {
         res.status(500).send(err);
+    }
+});
+
+router.get('/custom', async (req, res) => {
+    try {
+        const createdBy = req.query.promptUser;
+        const allprompts = await Prompt.find({ createdBy: createdBy || "" });
+        res.send(allprompts);
+    } catch (err) {
+        res.status(500).send(err);
+        console.log(err);
     }
 });
 
