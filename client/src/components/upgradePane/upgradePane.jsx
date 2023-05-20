@@ -14,8 +14,8 @@ export default function UpgradePane() {
         <AiFillStar style={{ color: "orange", fontSize: "1.3em", marginRight:"10px", display: "inline", marginLeft: "auto" }}/>
           Upgrade to Pro Plan To Get Access To All The Features &nbsp; &nbsp;
         <Link to="/pricing">
-          <button type="button" className="btn btn-primary">
-            Upgrade Now !
+          <button type="button" className="btn btn-warning bg-yellow-400 hover:bg-blue-800 hover:text-white rounded-full">
+            Upgrade Now!
           </button>
         </Link>
       </div>

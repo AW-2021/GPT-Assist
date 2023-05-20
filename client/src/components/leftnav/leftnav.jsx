@@ -6,6 +6,7 @@ import { RxPieChart } from "react-icons/rx";
 import { SiFramer } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
+import { BiCustomize } from "react-icons/bi";
 import { AuthContext } from '../../context/authContext';
 import axios from "axios";
 
@@ -60,6 +61,10 @@ function LeftNav() {
               <Link to="/prompts" className="hover:text-[rgb(212,224,224)]">
                 <AiOutlineFileSearch />&nbsp;&nbsp;Prompts
               </Link>
+
+              <Link to="/customprompt" className="hover:text-[rgb(212,224,224)]">
+                <BiCustomize />&nbsp;&nbsp;Custom Prompts
+              </Link>
           </div>
 
           <div className="bg-[#1a5a93] flex justify-start items-center gap-2 px-3 py-4">
@@ -96,12 +101,16 @@ function LeftNav() {
                 <Link to="/prompts" className="hover:text-[rgb(212,224,224)]">
                   <AiOutlineFileSearch />&nbsp;&nbsp;Prompts
                 </Link>
+
+                <Link to="/customprompt" className="hover:text-[rgb(212,224,224)]">
+                <BiCustomize />&nbsp;&nbsp;Custom Prompts
+              </Link>
             </div>
           </div>
 
           <div className="bg-[#1a5a93] flex justify-start items-center gap-2 px-3 py-4">
             <BsPersonCircle className="text-2xl"/>
-            <Link to="/account" className="hover:text-[rgb(212,224,224)]"></Link>
+            <Link to="/account" className="hover:text-[rgb(212,224,224)]">{username}</Link>
           </div>
         </div>
       )}
