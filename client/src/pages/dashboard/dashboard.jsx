@@ -87,9 +87,6 @@ function Dashboard() {
       console.log(option)
       console.log(isChecked)
     }
-
-      
-    
   };
 
   return (
