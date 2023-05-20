@@ -5,7 +5,7 @@ const promptSchema = new mongoose.Schema({
     category: { 
         type: String, 
         required: true, 
-        enum: ['Social Media', 'YouTube', 'Twitter', 'Blog Articles', 'Copy Writing', 'LinkedIn', 'Others', 'professional','personal', 'question', 'response', 'joke', 'quote', 'fact', 'news', 'event', 'feedback'],
+        enum: ['Social Media', 'YouTube', 'Twitter', 'Blog Articles', 'Copy Writing', 'LinkedIn', 'Others', 'Custom', 'professional','personal', 'question', 'response', 'joke', 'quote', 'fact', 'news', 'event', 'feedback'],
     },
     content: {
         type: String,
@@ -17,6 +17,11 @@ const promptSchema = new mongoose.Schema({
         enum: ['free', 'premium'],
         default: 'free',
     },
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: false,
+    }
 
 });
 
