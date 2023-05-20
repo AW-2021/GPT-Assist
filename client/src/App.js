@@ -8,6 +8,7 @@ import Signup from "./pages/signup-in/signup";
 import Signin from "./pages/signup-in/signin";
 import PricingPlans from "./pages/pricingplans/pricingplans";
 import StripeCheckout from "./pages/stripecheckout/stripecheckout";
+import CustomPrompt from "./pages/customPrompt/customPrompt";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/prompts" element={<PromptLibrary />} />
+          <Route path="/customprompt" element={<CustomPrompt />}/>
           <Route path="/account" element={<AccountInfo />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/welcome" element={<Welcome />} />
