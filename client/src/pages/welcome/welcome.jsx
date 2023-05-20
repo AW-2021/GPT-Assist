@@ -8,7 +8,7 @@ import { Grid } from '@mui/material';
 
 export default function Welcome() {
   return (
-    <Grid container>
+    <div className="md:flex h-full w-full">
       <LeftNav />
       <div className="OuterWrapper">
         <UpgradePane />
@@ -146,6 +146,6 @@ export default function Welcome() {
           </div>
         </div>
       </div>
-      </Grid>
+      </div>
   );
 }

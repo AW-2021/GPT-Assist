@@ -6,6 +6,7 @@ import Welcome from "./pages/welcome/welcome";
 import Projects from "./pages/projects/projects";
 import Signup from "./pages/signup-in/signup";
 import Signin from "./pages/signup-in/signin";
+import Main from "./pages/main/main";
 import PricingPlans from "./pages/pricingplans/pricingplans";
 import StripeCheckout from "./pages/stripecheckout/stripecheckout";
 import CustomPrompt from "./pages/customPrompt/customPrompt";
@@ -16,7 +17,8 @@ export default function App() {
     <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Signup />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chat" element={<Chat />} />
