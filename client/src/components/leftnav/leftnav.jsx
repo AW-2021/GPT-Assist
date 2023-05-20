@@ -29,7 +29,7 @@ function LeftNav() {
 
 
   return (
-    <div className="flex flex-col text-white basis-[14%] bg-[#006AB7] h-[1900px]">
+    <div className="flex flex-col text-white basis-[14%] bg-[#006AB7]">
       <div className="h-[60px] bg-[#1a5a93] top-0 py-8">
         <div className="w-full h-full flex md:justify-center xs:justify-between items-center text-xl font-bold">
           <p><SiFramer className="inline" />&nbsp;GPT Assist</p>
