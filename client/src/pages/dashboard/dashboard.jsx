@@ -8,6 +8,8 @@ import { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../context/authContext";
 import axios from "axios";
 import "../signup-in/signup-in.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Dashboard() {
   const projectsBox = `flex flex-col items-center justify-center border-[2px] 
@@ -61,6 +63,9 @@ function Dashboard() {
       setProjName("");
       setProjDesc("");
       setProjFiles([]);
+      toast.success('Project created successfully!', {
+        position: toast.POSITION.TOP_CENTER
+    });
     } catch (err) {
       console.error(err);
     }
@@ -223,6 +228,7 @@ function Dashboard() {
                 </button>
               </form>
             </Modal>
+            <ToastContainer />
           </div>
 
           <div className="flex items-center justify-between mt-[20px] mb-2">

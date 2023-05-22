@@ -7,6 +7,8 @@ import { Editor } from "@tinymce/tinymce-react";
 import Modal from "react-modal";
 import { AuthContext } from "../../context/authContext";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import "./chat.css";
 import "../signup-in/signup-in.css";
@@ -116,6 +118,9 @@ export default function Chat(props) {
       setIsModalOpen(false);
       setFileName("");
       setFileText("");
+      toast.success('File created successfully!', {
+        position: toast.POSITION.TOP_CENTER
+    });
     } catch (err) {
       console.error(err);
     }
@@ -229,6 +234,7 @@ export default function Chat(props) {
               </button>
             </div>
           </div>
+          <ToastContainer />
         </div>
       </div>
     </div>
