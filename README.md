@@ -30,6 +30,7 @@
   * [Signin and Signup](#signin-and-signup)
 - [Tech Stack](#space_invader-tech-stack)
 - [APIs Used](#gear-apis-used)
+- [Additional Information](#question-additional-information)
 - [License](#scroll-license)
 - [Contact](#telephone-contact)
 
@@ -131,6 +132,11 @@ This project is built using the following technologies:
 ### :gear: APIs Used
 
 - Stripe API: Manages subscriptions and user limits.
+
+## :question: Additional Information
+
+- Two subscription plans are managed using Stripe Subscription.
+- The TinyMCE editor is used to edit ChatGPT's responses directly in the chat page, before saving to a file.
   
 ## :scroll: License
 
