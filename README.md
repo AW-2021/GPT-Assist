@@ -29,19 +29,8 @@
   * [Pricing Plans](#pricing-plans)
   * [Signin and Signup](#signin-and-signup)
 - [Tech Stack](#space_invader-tech-stack)
-  * [Prerequisites](#bangbang-prerequisites)
-  * [Installation](#gear-installation)
-  * [Running Tests](#test_tube-running-tests)
-  * [Run Locally](#running-run-locally)
-  * [Deployment](#triangular_flag_on_post-deployment)
-- [Usage](#eyes-usage)
-- [Roadmap](#compass-roadmap)
-- [Contributing](#wave-contributing)
-  * [Code of Conduct](#scroll-code-of-conduct)
-- [FAQ](#grey_question-faq)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
+- [License](#scroll-license)
+- [Contact](#email-contact)
 
 <!-- About the Project -->
 ## :star2: About the Project
@@ -138,6 +127,17 @@ This project is built using the following technologies:
 - Database
   * ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
+## :scroll: License
+
+Platonic Club is licensed under the [MIT License](LICENSE).
+
+## :email: Contact
+
+
+
+For questions or suggestions, please reach out to me at [aminawasif20@gmail.com](mailto:aminawasif20@gmail.com).
+
+---
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
