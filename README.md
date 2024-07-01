@@ -31,7 +31,7 @@
 - [Tech Stack](#space_invader-tech-stack)
 - [APIs Used](#gear-apis-used)
 - [License](#scroll-license)
-- [Contact](#email-contact)
+- [Contact](#telephone-contact)
 
 <!-- About the Project -->
 ## :star2: About the Project
@@ -136,7 +136,7 @@ This project is built using the following technologies:
 
 GPT Assist is licensed under the [MIT License](LICENSE).
 
-## :incoming_envelope: Contact
+## :telephone: Contact
 
 
 
