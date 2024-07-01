@@ -29,6 +29,7 @@
   * [Pricing Plans](#pricing-plans)
   * [Signin and Signup](#signin-and-signup)
 - [Tech Stack](#space_invader-tech-stack)
+- [APIs Used](#gear-apis-used)
 - [License](#scroll-license)
 - [Contact](#email-contact)
 
@@ -126,12 +127,16 @@ This project is built using the following technologies:
   
 - Database
   * ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+    
+### :gear: APIs Used
 
+- Stripe API: Manages subscriptions and user limits.
+  
 ## :scroll: License
 
 Platonic Club is licensed under the [MIT License](LICENSE).
 
-## :email: Contact
+## :incoming_envelope: Contact
 
 
 
