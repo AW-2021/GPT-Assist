@@ -134,7 +134,7 @@ This project is built using the following technologies:
   
 ## :scroll: License
 
-Platonic Club is licensed under the [MIT License](LICENSE).
+GPT Assist is licensed under the [MIT License](LICENSE).
 
 ## :incoming_envelope: Contact
 
